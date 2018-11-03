@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Learning K-Means Algorithm</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="screen.css" type="text/css" />
+</head>
+
+<body>
+	
+<!-- 
+id: 
+kmeans - the whole div; 
+step - button; 
+restart - button；
+run - button;
+N - input;
+K - input;
+centroids - checkbox;
+reset - button;
+
+
+function:
+manual(this) - checkbox1; 
+centroids(this) - checkbox2; -->
+
+
+<div id="kmeans">
+
+	<h1>Learning K-Means</h1>
+	<p>Clustering is grouping of data or dividing a large data set into smaller data sets of some similarity. A well known clustering algorithm in unsupervised machine learning is K-Means clustering. The K-Means algorithm takes in n observations (data points), and groups them into k clusters, where each observation belongs to a cluster based on the nearest mean (cluster centroid). The distance between a data point and cluster centroid is calculated using the Euclidean distance.</p>
+
+	<h3>Five steps to do K-means</h3>
+	<p>Step 1. Plot data points.</p>
+	<p>Step 2. Initialize k additional points which are the seeds (cluster centroids) by plotting them randomly on the graph within the boundaries of the n observation’s dimenion ranges.</p>
+	<p>Step 3. Assign each n data point to it’s closest cluster centroid (mean).</p>
+	<p>Step 4. Move the cluster centroid to the average position of all the data points that belong to that mean.</p>
+	<p>Step 5: Repeat steps 3 and 4 until there is no change in each cluster centroid movement. If means remain the same (nothing moved) then we know the algorithm has finished.</p>
+	<p>the explainations were from: <a href="https://miguelmota.com/blog/k-means-clustering-in-javascript/">this site</a></p>
+
+	
+
+	<h3>Try the data viz down below to see how K-means works</h3>
+	<p>Currently, the N=30, K=3: </p>
+	<p>-  Click to set three K points in the viz below</p>
+	<p>-  After setting K points, keep cicking to see how the groups and centers change over iterations</p>
+	<p>-  Dots in the same color are in one group. The crossings represent the centers </p>
+	<p>-  Try changing the K and N in the input field below the viz</p>
+	
+	<div><svg>
+		
+	</svg></div>
+
+
+	<!-- Input: Input the number of N -->
+	<h4>Set different numbers of initial points and K here:</h4>
+	<p></p>
+
+	<div>
+		<label for="N">N (the number of node):</label>
+		<input type="number" id="N" min="2" max="1000" value="30">
+	</div>
+
+	<!-- Input: Input the number of K -->
+	<div>
+		<label for="K">K (the number of cluster):</label>
+		<input type="number" id="K" min="2" max="50" value="4">
+	</div>
+
+	<!-- Button: Click to reset -->
+	<div><button id="reset">New</button></div>
+
+<div id='outlier'>
+	<p>One disadvantage of K-means is its ability to handle the outliers. Try the data viz below to see the effect of clustering if there's an outlier</p>
+	<div><svg>
+		
+	</svg></div>
+
+	<!-- Input: Input the number of K -->
+	<div>
+		<label for="K">K (the number of cluster):</label>
+		<input type="number" id="K2" min="2" max="50" value="4">
+	</div>
+
+	<!-- Button: Click to reset -->
+	<div><button id="reset2">New</button></div>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js" charset="utf-8"></script>
+
+<script src="k-means.js"></script>
+
+</body>
+</html>

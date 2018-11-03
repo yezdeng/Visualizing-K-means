@@ -1,0 +1,45 @@
+body {
+	background-color: #1A2127;
+}
+
+h1 {
+    font-weight: bold;
+    margin-top: 50px; 
+    margin-bottom: 20px;
+    color: rgba(177,201,208,0.8);
+}
+
+h2,h3,h4,label {
+    color: rgba(177,201,208,0.8);
+}
+
+h3 {
+	margin: 40px auto 20px auto;
+}
+
+p{
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+	color: rgba(177,201,208,0.8);
+
+}
+
+a {
+	color: rgba(65,125,157,0.8);;
+}
+
+#kmeans { 
+	margin: 20px auto; 
+	padding: 0 5px; 
+	width: 45em; 
+	text-align: left; 
+}
+#kmeans svg, #outlier svg{
+	margin: 30px auto 10px auto;
+	background-image: url('backgroundImage.png');	
+}
+#outlier {
+	margin-top: 30px;
+}
